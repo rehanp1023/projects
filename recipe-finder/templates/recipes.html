@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Recipes{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Recipe Results</h2>
+        {% if recipes %}
+            <ul>
+                {% for recipe in recipes %}
+                    <li>
+                        <h3>{{ recipe.title }}</h3>
+                        <p>{{ recipe.description }}</p>
+                        <a href="{{ url_for('favorite', recipe_id=recipe.id) }}">Add to Favorites</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+        <p>No recipes found. Try different ingredients.</p>
+        {% endif %}
+    </div>
+{% endblock %}

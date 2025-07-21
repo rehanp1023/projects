@@ -1,0 +1,138 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.navbar {
+    width: 100%;
+    background-color: #3b5998;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #dfe3ee;
+}
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin-top: 100px;
+    animation: fadeInUp 0.6s ease-in-out;
+}
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+button {
+    padding: 15px;
+    background: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #2d4373;
+}
+a {
+    color: #3b5998;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+a:hover {
+    text-decoration: underline;
+}
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+.recipes ul {
+    list-style-type: none;
+    padding: 0;
+}
+.recipes li {
+    background: #fafafa;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.recipes li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.flashes {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.flashes li {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.flashes .success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.flashes .danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.flashes .warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+.flashes .info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { opacity: 1;
+        transform: translateY(0);
+    }
+}

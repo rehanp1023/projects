@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Find Recipes{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Find Recipes</h2>
+        <form action="{{ url_for('recipes') }}" method="post">
+            <input type="text" name="ingredients" placeholder="Enter ingredients" required>
+            <button type="submit">Search</button>
+        </form>
+        <div class="recipes">
+            {% if recipes %}
+                <ul>
+                    {% for recipe in recipes %}
+                        <li>
+                            <h3>{{ recipe.title }}</h3>
+                            <p>{{ recipe.description }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

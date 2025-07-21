@@ -1,0 +1,5 @@
+Flask
+cs50
+requests
+openai
+werkzeug.security
